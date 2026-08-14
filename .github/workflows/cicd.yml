@@ -12,9 +12,9 @@ jobs:
   dockerbuild:
     runs-on: ubuntu-latest
     steps:
-        - name: Build Docker image
-        - uses: actions/checkout@v4
-          run: docker build . --file Dockerfile --tag workflow-test:$(date +%s) 
+      - uses: actions/checkout@v4
+      - name: Build Docker image
+        run: docker build . --file Dockerfile --tag workflow-test:$(date +%s)
   build-and-test:
     runs-on: ubuntu-latest
 
